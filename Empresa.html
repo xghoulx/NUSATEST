@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<!-- CABEÇALHO -->
+<meta charset="utf-8">
+<meta name="description" content="Teste Para empresa Nusa">
+<meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
+<meta name="author" content="Lucas Rodrigues Callegari Albuquerque">
+<meta http-equiv="refresh" content="120">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<title> Teste Nusa </title>
+
+<!-- FORMULARIO MENSAGEM SCRIPT -->
+<script type="text/javascript">
+
+    function Mensagem(){
+        var fm = document.forms["Formulario1"]
+        var nome = fm.NomeCompleto.value
+        var nomeMae = fm.NomedaMae.value
+        var dtnascimento = fm.DatadeNascimento.value
+        var sexo = fm.SeuSexo.value
+        var end = fm.SeuEndereco.value
+        var num = fm.SeuNumero.value
+        var bai = fm.SeuBairro.value 
+        var est = fm.SeuEstado.value
+        var cid = fm.SuaCidade.value
+        var cep = fm.SeuCep.value
+
+        alert(nome +" filho de "+ nomeMae +" nascido em "+ dtnascimento+ " do sexo " + sexo + " reside no endereço " + end + ", " + num + ", " + bai + ", " + cid + ", " + est + " ," + cep )
+        return false
+    }
+
+</script>
+
+</head>
+
+<body>
+
+<!-- Barra de Navegacao -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<div class="container">
+
+<a class="navbar-brand h1 mb-0" href="https://nusa.com.br/">Nusa</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarSite">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSite"> 
+
+</div>
+</div>
+</nav>
+
+<!-- FORMULARIO -->
+<div class="row justify-content-center mb-5 ">
+<div class="col-sm-12 col-md-10 col-lg-8 border bg-light">
+
+<form action="Cadastro.php" method="POST" id="Formulario1" mame="Formulario1" onsubmit="return Mensagem()">
+
+<legend> Preencha os Dados com Suas Informaçoes Pessoais</legend>
+
+<div class="form-row">
+
+<div class="form-group mr-2 ">
+<label for="imputNome">Seu Nome Completo:</label>
+<input type="text" class="form-control bg-white" id="imputNome" name="NomeCompleto" required autofocus autocomplete="om" placeholder="Nome Completo" > <br>
+</div>
+
+<div class="form-group mr-2 ">
+<label for="imputNomedaMae">Nome da Sua Mãe:</label>
+<input type="text" class="form-control bg-white" id="imputNomedaMae" name="NomedaMae" required autofocus autocomplete="om" placeholder="Nome da Mãe"> <br>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputEmail">Seu Email:</label>
+<input type="email" class="form-control bg-white" id="imputEmail" name="SeuEmail" required autofocus autocomplete="om" placeholder="Exemplo@Hotmail.com"> <br>
+<small class="form-text-muted">Seu Email Não Sera Divulgado</small>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputSexo">Seu Sexo:</label>
+<select id="imputSexo" class="form-control bg-white" name="SeuSexo">
+<option selected>Escolha</option>
+<option>Masculino</option>
+<option>Feminino</option>
+</select>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputDataNascimento">Data de Nascimento:</label> 
+<br> <input type="date" class="form-control bg-white" id="imputDataNascimento" name="DatadeNascimento" required autofocus> <br>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group mr-2">
+<label for="imputEndereco">Seu Endereço:</label>
+<input type="text" class="form-control bg-white" id="imputEndereco" name="SeuEndereco" required autofocus autocomplete="om" placeholder="Nome da Rua"> <br>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputNumero">Numero:</label>
+<input type="number" min="1" max="1000" class="form-control bg-white" id="imputNumero" name="SeuNumero" required autofocus autocomplete="om" placeholder="Numero da Casa"> <br>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputBairro">Seu Bairro:</label>
+<input type="text" class="form-control bg-white" id="imputBairro" name="SeuBairro" required autofocus autocomplete="om" placeholder="Nome do Bairro"> <br>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputCidade">Cidade:</label>
+<input type="text" class="form-control bg-white" id="imputCidade" name="SuaCidade" required autofocus autocomplete="om" placeholder="Sua Cidade"> <br>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputEstado">Seu Estado:</label> 
+<select id="imputEstado" name="SeuEstado" class="form-control bg-white">
+<option selected>Escolha</option>
+<option>Espirito Santo</option>
+<option>São Paulo</option>
+<option>Brasilia</option>
+<option>...</option>
+</select>
+</div>
+
+<div class="form-group mr-2">
+<label for="imputCep">Cep:</label>
+<input type="text" maxlength="8" class="form-control bg-white" id="imputCep" name="SeuCep" required autofocus autocomplete="om" placeholder="00000-000"> <br>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group mr-2">
+<button type="submit" class="btn btn-primary" name="Enviar" value="Enviar"> Enviar </button>
+
+</div>
+</div>
+
+</form>
+
+</div>
+</div>
+<!-- FIM DO FORMULARIO -->
+
+<!-- BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/umd/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
